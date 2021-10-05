@@ -34,6 +34,7 @@ const usePicker = ({
     return () => {
       if (picker) {
         picker.close();
+        onError(new Error("user closed"))
       }
     };
   }, [rootId, containerId, apikey, clientOptions, pickerOptions, _onUploadDone]);
